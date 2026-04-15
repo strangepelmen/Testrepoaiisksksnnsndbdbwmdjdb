@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoVolume</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <canvas id="scene"></canvas>
+
+  <div class="panel">
+    <h1>🌍 EcoVolume</h1>
+
+    <div class="category">
+      <h3>🍎 Food</h3>
+      <button onclick="addCO2(4)">Beef Burger</button>
+      <button onclick="addCO2(1.5)">Chicken Meal</button>
+      <button onclick="addCO2(0.5)">Plant Meal</button>
+    </div>
+
+    <div class="category">
+      <h3>🚗 Transport</h3>
+      <button onclick="addCO2(10)">Taxi Ride</button>
+      <button onclick="addCO2(2)">Bus Ride</button>
+      <button onclick="addCO2(150)">Flight</button>
+    </div>
+
+    <div class="category">
+      <h3>🛍️ Shopping</h3>
+      <button onclick="addCO2(15)">T-Shirt</button>
+      <button onclick="addCO2(33)">Jeans</button>
+      <button onclick="addCO2(80)">Smartphone</button>
+    </div>
+
+    <div class="category">
+      <h3>💻 Digital</h3>
+      <button onclick="addCO2(0.06)">Streaming</button>
+      <button onclick="addCO2(150)">Crypto Tx</button>
+    </div>
+
+    <div class="stats">
+      <p>Total CO₂: <span id="co2">0</span> kg</p>
+      <p>Volume: <span id="volume">0</span> m³</p>
+    </div>
+
+    <button class="share" onclick="share()">🔗 Share</button>
+    <button class="download" onclick="download()">📸 Poster</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
